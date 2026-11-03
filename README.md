@@ -24,7 +24,7 @@ The online fast-fashion company needs to decide how many swimwear units to make 
 
 ## The model
 
-For each month *t*, the decision variables are regular production *Pₜ*, overtime *Oₜ*, ending inventory *Iₜ* and backlog *Bₜ* (which is the unmet demand carried forward).
+For each month *t*, the decision variables are regular production *Pₜ*, overtime *OTₜ*, ending inventory *Iₜ* and backlog *Bₜ* (which is the unmet demand carried forward).
 
 **Minimise** Σ (8·Pₜ + 12·OTₜ + 0.17·Iₜ + b·Bₜ)
 
@@ -46,12 +46,12 @@ For each month *t*, the decision variables are regular production *Pₜ*, overti
 
 **Scenario A** is the result in my submitted report. In this scenario, nothing is ever produced: a £0.50 backlog penalty is far below the £8.00 cost of making a unit, so the solver defers every order, all year. Although this is mathematically ideal, in practice it is operationally unrealistic.
 
-This is why the following recommendations would be best to implement so as to help the brand improve swimwear sales:
+This is why the following recommendations would be best to implement so as to help the brand plan for production more realistically:
 1. Re-evaluation of the backlog cost assumptions, so it reflects lost sales and customer dissatisfaction
 2. Incorporating service-level constraints so demand is actually fulfilled and future models include constraints that help enforce a minimum percentage of demand
 3. Balancing cost with proactiveness, by involving proactive production steps before reaching peak months, regardless of higher costs
 
-**Scenario B** applies all three. With the backlog penalty set above the overtime cost and backlog cleared by December, the plan meets demand month by month. It also builds about 700 units of stock in **May**, because June's forecast (15,198) exceeds regular capacity (14,500), and making units early and storing them (£8.17) is cheaper than overtime (£12.00).
+**Scenario B** applies all three. With the backlog penalty set above the overtime cost and backlog cleared by December, the plan meets demand month by month. It also builds about 700 units of stock in **May**, because June's forecast (15,197) exceeds regular capacity (14,500), and making units early and storing them (£8.17) is cheaper than overtime (£12.00).
 
 ## What this shows
 
